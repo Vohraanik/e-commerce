@@ -3,22 +3,24 @@ const { categoriesControler } = require("../../../controler");
 const app = express();
 const router = express.Router();
 
+
 router.get("/list-categories",
     categoriesControler.listcategories
 );
+router.get("/list-categories/:category_id",
+    categoriesControler.getcategories
+);
+router.post("/add-categories",
+categoriesControler.addcategories
+);
 
-router.post("/",(req,res)=>{
-    res.send("post request")
-    console.log("Post");
-});
+router.put("/update-categories",
+categoriesControler.updatecategories 
+);
 
-router.put("/",(req,res)=>{
-    res.send("put request")
-});
-
-router.delete("/",(req,res)=>{
-    res.send("delete request")
-});
+router.delete("/delete-categories",
+    categoriesControler.deletecategories
+);
 
 
 module.exports = router;

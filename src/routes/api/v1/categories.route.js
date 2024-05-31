@@ -14,11 +14,11 @@ router.post("/add-categories",
 categoriesControler.addcategories
 );
 
-router.put("/update-categories",
+router.put("/update-categories/:category_id",
 categoriesControler.updatecategories 
 );
 
-router.delete("/delete-categories",
+router.delete("/delete-categories/:category_id",
     categoriesControler.deletecategories
 );
 

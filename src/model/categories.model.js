@@ -17,7 +17,7 @@ const categoriesSchema = new mongoose.Schema(
         },
         image:{
             type: String,
-            required: true,
+            // required: true,
         },
         is_active:{
             type:Boolean,

@@ -107,6 +107,7 @@ const updatecategories = async (req, res) => {
 
 const deletecategories = async (req, res) => {
     try {
+       
         const category = await Categories.findByIdAndDelete(req.params.category_id);
 
         if (!category) {

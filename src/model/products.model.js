@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 
 const productsSchema = new mongoose.Schema(
     { 
+        category_id:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"Categories",
+            required:true,
+        },
         subcategory_id:{
             type:mongoose.Schema.Types.ObjectId,
             ref:"Subcategories",
@@ -22,7 +27,13 @@ const productsSchema = new mongoose.Schema(
             lowercase:true
         },
         image:{
-            type: String,
+            type: {
+                public_id:String,
+                url:String
+            }
+        },
+        price:{
+            type: Number,
             required: true,
         },
         is_active:{

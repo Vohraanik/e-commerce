@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.get("/list-categories",
-    categoriesControler.listcategories
+    categoriesControler.listcategories  
 );
 router.get("/list-categories/:category_id",
     categoriesControler.getcategories
